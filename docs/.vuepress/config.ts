@@ -31,33 +31,32 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       { text: '首页', link: '/' },
       {
         text: 'Java基础',
-        link: '/pages/8481d13/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
+        link: '/page/course_10005', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
         items: [
           // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
           {
             text: 'Java基础',
             items: [
-              { text: 'JavaScript', link: '/pages/8481d13/' },
+              { text: 'HashMap', link: '/page/course_10005/' },
             ],
           },
           {
             text: '学习笔记',
             items: [
-              { text: '《JavaScript教程》', link: '/note/javascript/' },
-              {
-                text: '《Git》',
-                link: '/note/git/',
-              },
+              { text: '基础语法', link: '/page/course_10000/' },
+              { text: '面向对象', link: '/page/course_10002/'},
+              { text: '集合框架', link: '/note/Java/collections/'},
+              { text: '查看全部', link: '/page/course_10000/'},
             ],
           },
         ],
       },
       {
         text: 'Java高级',
-        link: '/ui/',
+        link: '/Java/advanced/',
         items: [
-          { text: 'Jvm', link: '/pages/8309a5b876fc95e3/' },
-          { text: '并发', link: '/pages/0a83b083bdf257cb/' },
+          { text: 'Jvm', link: '/pages/course_20000/' },
+          { text: '并发', link: '/pages/course_23000/' },
         ],
       },
       {
@@ -72,22 +71,25 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
       {
         text: '计算机基础',
-        link: '/more/',
+        link: '/computer-base/',
         items: [
-          { text: '数据结构和算法', link: '/pages/f2a556/' },
+          { text: '数据结构', link: '/pages/f2a556/' },
+          { text: '算法', link: '/pages/f2a556/' },
           { text: '计算机网络', link: '/pages/aea6571b7a8bae86/' },
           { text: '数据库/SQL', link: '/pages/2d615df9a36a98ed/' },
           { text: '操作系统', link: '/pages/baaa02/' },
-          { text: '友情链接', link: '/friends/' },
+          { text: '软件工程', link: '/pages/baaa02/' }
         ],
       },
       {
         text: '其他',
         link: '/other/',
         items: [
-          { text: '网站', link: '/pages/beb6c0bd8a66cea6/' },
-          { text: '资源', link: '/pages/eee83a9211a70f9d/' },
-          { text: 'Vue资源', link: '/pages/12df8ace52d493f6/' },
+          { text: 'Git', link: '/page/course_60000/' },
+          { text: 'Github', link: '/page/course_60003/' },
+          { text: '面试相关', link: '/pages/aea6571b7a8bae86/' },
+          { text: 'VUE', link: '/other/vue/detail/' },
+          { text: '查看全部', link: '/other/'},
         ],
       },
       {
@@ -308,26 +310,26 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
-    [
-      'vuepress-plugin-comment', // 评论
-      {
-        choosen: 'gitalk',
-        options: {
-          clientID: 'a6e1355287947096b88b',
-          clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-          repo: 'blog-gitalk-comment', // GitHub 仓库
-          owner: 'Ambitionon', // GitHub仓库所有者
-          admin: ['Ambitionon'], // 对仓库有写权限的人
-          // distractionFreeMode: true,
-          pagerDirection: 'last', // 'first'正序 | 'last'倒序
-          id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-          title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-          labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-          body:
-            '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
-        },
-      },
-    ],
+    // [
+    //   'vuepress-plugin-comment', // 评论
+    //   {
+    //     choosen: 'gitalk',
+    //     options: {
+    //       clientID: 'b816c6048e729a58418e',
+    //       clientSecret: 'fe93b31e71e8332fb03d5d115cc55888328f1cbc',
+    //       repo: 'blog-gitalk-comment', // GitHub 仓库
+    //       owner: 'Ambitionon', // GitHub仓库所有者
+    //       admin: ['Ambitionon'], // 对仓库有写权限的人
+    //       // distractionFreeMode: true,
+    //       pagerDirection: 'last', // 'first'正序 | 'last'倒序
+    //       id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+    //       title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+    //       labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+    //       body:
+    //         '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+    //     },
+    //   },
+    // ],
     [
       '@vuepress/last-updated', // "上次更新"时间格式
       {
