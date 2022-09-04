@@ -46,7 +46,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
               { text: '基础语法', link: '/page/course_10000/' },
               { text: '面向对象', link: '/page/course_10002/'},
               { text: '集合框架', link: '/note/Java/collections/'},
-              { text: '查看全部', link: '/page/course_10000/'},
             ],
           },
         ],
@@ -61,7 +60,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
       {
         text: '主流框架',
-        link: '/technology/',
+        link: '/main-frame/',
         items: [
           { text: 'Spring', link: '/pages/9a7ee40fc232253e/' },
           { text: 'mybatis', link: '/pages/4c778760be26d8b3/' },
@@ -69,16 +68,28 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: 'vertx', link: '/pages/41f87d890d0a02af/' },
         ],
       },
+       {
+        text: '中间件',
+        link: '/middleware/',
+        items: [
+          { text: 'Redis', link: '/pages/course_20000/' },
+          { text: 'ElasticSearch', link: '/pages/course_23000/' },
+          { text: 'kafka', link: '/pages/course_23000/' },
+          { text: 'RabitMQ', link: '/pages/course_23000/' },
+          { text: 'Tomcat', link: '/pages/course_23000/' },
+          { text: 'Nginx', link: '/pages/course_23000/' },
+        ],
+      },
       {
         text: '计算机基础',
         link: '/computer-base/',
         items: [
-          { text: '数据结构', link: '/pages/f2a556/' },
-          { text: '算法', link: '/pages/f2a556/' },
-          { text: '计算机网络', link: '/pages/aea6571b7a8bae86/' },
-          { text: '数据库/SQL', link: '/pages/2d615df9a36a98ed/' },
-          { text: '操作系统', link: '/pages/baaa02/' },
-          { text: '软件工程', link: '/pages/baaa02/' }
+          { text: '数据结构', link: '/note/computer-base/data-structure/' },
+          { text: '算法', link: '/note/computer-base/algorithm/' },
+          { text: '计算机网络', link: '/note/computer-base/network/' },
+          { text: '数据库/SQL', link: '/note/computer-base/database/' },
+          { text: '操作系统', link: '/note/computer-base/control-system/' },
+          { text: '软件工程', link: '/note/computer-base/software-engineering/' }
         ],
       },
       {
@@ -89,7 +100,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: 'Github', link: '/page/course_60003/' },
           { text: '面试相关', link: '/pages/aea6571b7a8bae86/' },
           { text: 'VUE', link: '/other/vue/detail/' },
-          { text: '查看全部', link: '/other/'},
         ],
       },
       {
