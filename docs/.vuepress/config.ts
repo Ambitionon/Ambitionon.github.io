@@ -100,6 +100,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: 'Github', link: '/page/course_60003/' },
           { text: '面试相关', link: '/pages/aea6571b7a8bae86/' },
           { text: 'VUE', link: '/other/vue/detail/' },
+          { text: 'ES6', link: '/other/ES6/detail/' },
         ],
       },
       {
